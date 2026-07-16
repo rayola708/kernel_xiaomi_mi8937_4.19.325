@@ -51,9 +51,11 @@ jobs:
             tar -xf zyc-clang.tar.gz
             rm -f zyc-clang.tar.gz
 
-      - name: Setup KernelSU (Legacy)
+      - name: Setup KernelSU (Hookless)
         run: |
-          curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -s legacy
+          # curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -s legacy
+          # curl -LSs "https://raw.githubusercontent.com/Mr-Morat/KernelSU-Next/stable/kernel/setup.sh" | bash -s syscall
+          curl -LSs "https://raw.githubusercontent.com/backslashxx/KernelSU/master/kernel/setup.sh" | bash -
 
       - name: Revert Commit on KernelSU-Next
         if: github.event_name == 'workflow_dispatch' && github.event.inputs.commit_sha != ''
