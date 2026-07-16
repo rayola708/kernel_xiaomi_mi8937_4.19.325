@@ -13,8 +13,8 @@ if [ -z "$VARIANT" ]; then
 fi
 
 # ================= PATH =================
-DEFCONFIG="vendor/msm8953-perf_defconfig"
-TEMP_DEFCONFIG="vendor/msm8953-perf_defconfig"
+DEFCONFIG="vendor/rahmatmi8937_defconfig"
+TEMP_DEFCONFIG="vendor/rahmatmi8937_defconfig"
 ROOTDIR=$(pwd)
 OUTDIR="$ROOTDIR/out/arch/arm64/boot"
 ANYKERNEL_DIR="$ROOTDIR/AnyKernel"
